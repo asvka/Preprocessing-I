@@ -133,4 +133,85 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 10px;
+  margin: 1%;
+}
+.header {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  text-align: right;
+  margin-right: 17%;
+  padding-right: 5%;
+  opacity: 1;
+  transition: 0.1s;
+}
+nav a {
+  padding: 2%;
+  color: #490c49;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+nav a:hover {
+  opacity: 0.1;
+}
+h1 {
+  font-size: 4em;
+  padding: 1%;
+}
+.intro h2 {
+  padding: 1%;
+}
+h2 {
+  font-size: 2em;
+}
+.profilePic {
+  padding: 5%;
+}
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 2%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.intro {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  padding: 1%;
+}
+.skills {
+  margin: 2%;
+  padding: 2%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-position: cover;
+  width: 20%;
+}
+.workHistory {
+  margin: 2%;
+  padding: 2%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-position: cover;
+  width: 20%;
+}
+.contact {
+  padding: 2%;
+  margin-left: 70%;
+}
+.contact a {
+  text-decoration: none;
+  color: black;
 }
