@@ -47,8 +47,20 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.backgroundProperties{
+	background-image: url("../images/bkgd.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.paddingMarginProperties{
+	margin: 2%;
+	padding: 2%;
+}
+.boxWidth{
+	width: 30%;
+}
+@main-text-color: rgb(73, 12, 73);
 
-/* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
@@ -56,7 +68,7 @@ table {
 html, body {
 	height: 100%;
 	font-size: 10px;
-	margin: 1%;
+	.paddingMarginProperties();
 }
 .header{
 	margin: 0;
@@ -69,13 +81,12 @@ nav{
 	text-align: right;
 	margin-right: 17%;
 	padding-right: 5%;
-	// padding-top: 1%;
 	opacity: 1;
 	transition: 0.1s;
 }
 nav a{
 	padding: 2%;
-	color: rgb(73, 12, 73);
+	color: @main-text-color;
 	text-decoration: none;
 	font-size: 1.4em;
 
@@ -86,12 +97,14 @@ nav a:hover{
 h1{
 	font-size: 4em;
 	padding: 1%;
+	color: @main-text-color;
 }
 .intro h2{
 	padding: 1%;
 }
 h2{
 	font-size: 2em;
+	color: @main-text-color;
 }
 .profilePic{
 	padding: 5%;
@@ -102,10 +115,8 @@ h2{
 	justify-content: center;
 	align-items: center;
 	width: 80%;
-	margin: 2%;
-	background-image: url("../images/bkgd.jpg");
-	background-position: center;
-	background-size: cover;
+	.paddingMarginProperties();
+	.backgroundProperties();
 }
 .intro{
 	display: flex;
@@ -114,27 +125,22 @@ h2{
 	width: 100%;
 	text-align: center;
 	align-items: center;
-	padding: 1%;
+	.paddingMarginProperties();
 }
 .skills{
-	margin: 2%;
-	padding: 2%;
-	background-image: url("../images/bkgd.jpg");
-	background-position: center;
-	background-position: cover;
-	width: 20%;
+	.boxWidth();
+	.backgroundProperties();
+	.paddingBackgroundProperties();
 }
 .workHistory{
-	margin: 2%;
-	padding: 2%;
-	background-image: url("../images/bkgd.jpg");
-	background-position: center;
-	background-position: cover;
-	width: 20%;
+	.boxWidth();
+	.backgroundProperties();
+	.paddingBackgroundProperties();
 }
 .contact{
-	padding: 2%;
-	margin-left: 70%;
+	.boxWidth();
+	.backgroundProperties();
+	.paddingBackgroundProperties();
 }
 .contact a {
 	text-decoration: none;

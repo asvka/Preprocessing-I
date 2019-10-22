@@ -126,7 +126,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Set every element's box-sizing to border-box */
+.backgroundProperties {
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.paddingMarginProperties {
+  margin: 2%;
+  padding: 2%;
+}
 * {
   box-sizing: border-box;
 }
@@ -134,7 +142,8 @@ html,
 body {
   height: 100%;
   font-size: 10px;
-  margin: 1%;
+  margin: 2%;
+  padding: 2%;
 }
 .header {
   margin: 0;
@@ -162,12 +171,14 @@ nav a:hover {
 h1 {
   font-size: 4em;
   padding: 1%;
+  color: #490c49;
 }
 .intro h2 {
   padding: 1%;
 }
 h2 {
   font-size: 2em;
+  color: #490c49;
 }
 .profilePic {
   padding: 5%;
@@ -178,6 +189,7 @@ h2 {
   align-items: center;
   width: 80%;
   margin: 2%;
+  padding: 2%;
   background-image: url("../images/bkgd.jpg");
   background-position: center;
   background-size: cover;
@@ -189,27 +201,31 @@ h2 {
   width: 100%;
   text-align: center;
   align-items: center;
-  padding: 1%;
+  margin: 2%;
+  padding: 2%;
 }
 .skills {
   margin: 2%;
   padding: 2%;
+  width: 20%;
   background-image: url("../images/bkgd.jpg");
   background-position: center;
-  background-position: cover;
-  width: 20%;
+  background-size: cover;
 }
 .workHistory {
   margin: 2%;
   padding: 2%;
+  width: 20%;
   background-image: url("../images/bkgd.jpg");
   background-position: center;
-  background-position: cover;
-  width: 20%;
+  background-size: cover;
 }
 .contact {
   padding: 2%;
   margin-left: 70%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .contact a {
   text-decoration: none;
