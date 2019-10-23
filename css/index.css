@@ -182,17 +182,11 @@ h1 {
   font-size: 4em;
   color: #490c49;
 }
-.intro h2 {
-  padding: 1%;
-}
 h2 {
   font-size: 2em;
   color: #490c49;
   margin: 1%;
   padding: 1%;
-}
-.profilePic {
-  padding: 3%;
 }
 .profile {
   display: flex;
@@ -206,6 +200,9 @@ h2 {
   background-position: center;
   background-size: cover;
 }
+.profile .profilePic {
+  padding: 3%;
+}
 .profile .intro {
   display: flex;
   justify-content: space-evenly;
@@ -216,16 +213,15 @@ h2 {
   margin: 1%;
   padding: 1%;
 }
-p {
+.profile .intro p {
   color: #490c49;
 }
-.dates {
+.boxes {
+  display: flex;
+  justify-content: center;
   padding: 5px;
 }
-.establishment {
-  padding: 5px;
-}
-.skills {
+.boxes .skills {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -237,7 +233,27 @@ p {
   background-size: cover;
   text-align: center;
 }
-.workHistory {
+.boxes .contact {
+  width: 25%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxes .contact a {
+  width: 100%;
+  text-decoration: none;
+  color: #490c49;
+}
+.boxes .contact a :hover {
+  opacity: 0.1;
+}
+.boxes .workHistory {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,31 +266,16 @@ p {
   padding: 1%;
   text-align: center;
 }
-.container {
+.boxes .workHistory .container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-.boxes {
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-}
-.contact {
-  width: 25%;
-  background-image: url("../images/bkgd.jpg");
-  background-position: center;
-  background-size: cover;
-  text-align: center;
+.boxes .workHistory .container .dates {
   margin: 1%;
   padding: 1%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.contact a {
-  text-decoration: none;
-  color: #490c49;
-}
-.contact a :hover {
-  opacity: 0.1;
+.boxes .workHistory .container .dates .establishment {
+  margin: 1%;
+  padding: 1%;
 }
