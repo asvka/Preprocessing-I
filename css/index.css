@@ -172,23 +172,27 @@ nav a {
 nav a:hover {
   opacity: 0.1;
 }
+@media (max-width: 500px) {
+  nav {
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1%;
+    padding: 1%;
+  }
+  nav a {
+    padding: 2%;
+    text-align: center;
+  }
+}
 .large-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
 }
-h1 {
-  font-size: 4em;
-  color: #490c49;
-}
-h2 {
-  font-size: 2em;
-  color: #490c49;
-  margin: 1%;
-  padding: 1%;
-}
-.profile {
+.large-container .profile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,10 +204,10 @@ h2 {
   background-position: center;
   background-size: cover;
 }
-.profile .profilePic {
+.large-container .profile .profilePic {
   padding: 3%;
 }
-.profile .intro {
+.large-container .profile .intro {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -213,8 +217,28 @@ h2 {
   margin: 1%;
   padding: 1%;
 }
-.profile .intro p {
+.large-container .profile .intro p {
   color: #490c49;
+}
+@media (max-width: 500px) {
+  .large-container .profile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .large-container .profile .profilePic {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+h1 {
+  font-size: 4em;
+  color: #490c49;
+}
+h2 {
+  font-size: 2em;
+  color: #490c49;
+  margin: 1%;
+  padding: 1%;
 }
 .boxes {
   display: flex;
@@ -233,25 +257,12 @@ h2 {
   background-size: cover;
   text-align: center;
 }
-.boxes .contact {
-  width: 25%;
-  background-image: url("../images/bkgd.jpg");
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  margin: 1%;
-  padding: 1%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.boxes .contact a {
-  width: 100%;
-  text-decoration: none;
-  color: #490c49;
-}
-.boxes .contact a :hover {
-  opacity: 0.1;
+@media (max-width: 500px) {
+  .boxes .skills {
+    width: 80%;
+    margin: 1%;
+    padding: 1%;
+  }
 }
 .boxes .workHistory {
   display: flex;
@@ -278,4 +289,46 @@ h2 {
 .boxes .workHistory .container .dates .establishment {
   margin: 1%;
   padding: 1%;
+}
+@media (max-width: 500px) {
+  .boxes .workHistory {
+    width: 80%;
+    display: flex;
+  }
+}
+.boxes .contact {
+  width: 25%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxes .contact a {
+  width: 100%;
+  text-decoration: none;
+  color: #490c49;
+}
+.boxes .contact a :hover {
+  opacity: 0.1;
+}
+@media (max-width: 500px) {
+  .boxes .contact {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  .boxes {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+  }
 }
