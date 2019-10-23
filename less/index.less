@@ -47,17 +47,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 .backgroundProperties{
 	background-image: url("../images/bkgd.jpg");
 	background-position: center;
 	background-size: cover;
 }
+.center{
+	text-align: center;
+}
 .paddingMarginProperties{
-	margin: 2%;
-	padding: 2%;
+	margin: 1%;
+	padding: 1%;
 }
 .boxWidth{
-	width: 30%;
+	width: 25%;
 }
 @main-text-color: rgb(73, 12, 73);
 
@@ -68,35 +72,41 @@ table {
 html, body {
 	height: 100%;
 	font-size: 10px;
-	.paddingMarginProperties();
 }
 .header{
-	margin: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 }
-nav{
+nav {
+	padding: 1%;
+	padding-right: 15%;
 	text-align: right;
-	margin-right: 17%;
-	padding-right: 5%;
 	opacity: 1;
 	transition: 0.1s;
-}
-nav a{
-	padding: 2%;
-	color: @main-text-color;
-	text-decoration: none;
-	font-size: 1.4em;
 
+	a {
+		padding-left: 1%;
+		padding-right: 1%;
+		color: @main-text-color;
+		text-decoration: none;
+		font-size: 1.4em;
+	}
 }
+
 nav a:hover{
 	opacity: 0.1;
 }
+.large-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
 h1{
 	font-size: 4em;
-	padding: 1%;
 	color: @main-text-color;
 }
 .intro h2{
@@ -105,9 +115,10 @@ h1{
 h2{
 	font-size: 2em;
 	color: @main-text-color;
+	.paddingMarginProperties();
 }
 .profilePic{
-	padding: 5%;
+	padding: 3%;
 }
 
 .profile{
@@ -115,35 +126,72 @@ h2{
 	justify-content: center;
 	align-items: center;
 	width: 80%;
+	height: 400px;
 	.paddingMarginProperties();
 	.backgroundProperties();
+	.intro{
+			display: flex;
+			justify-content: space-evenly;
+			flex-direction: column;
+			width: 100%;
+			text-align: center;
+			align-items: center;
+			.paddingMarginProperties();
+	}
 }
-.intro{
-	display: flex;
-	justify-content: space-evenly;
-	flex-direction: column;
-	width: 100%;
-	text-align: center;
-	align-items: center;
-	.paddingMarginProperties();
+
+p{
+	color: @main-text-color;
+}
+.dates{
+	padding: 5px;
+}
+.establishment{
+	padding: 5px;
 }
 .skills{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	.boxWidth();
+	.paddingMarginProperties();
 	.backgroundProperties();
-	.paddingBackgroundProperties();
+	.center();
 }
 .workHistory{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 	.boxWidth();
 	.backgroundProperties();
-	.paddingBackgroundProperties();
+	.paddingMarginProperties();
+	.center();
+}
+
+.container{
+	display: flex;
+	justify-content: space-between;
+}
+.boxes{
+	display: flex;
+	justify-content: center;
+	padding: 5px;
 }
 .contact{
 	.boxWidth();
 	.backgroundProperties();
-	.paddingBackgroundProperties();
+	.center();
+	.paddingMarginProperties();
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .contact a {
 	text-decoration: none;
-	color: black;
-}
+	color: @main-text-color;
 
+	:hover{
+		opacity: 0.1;
+	}
+}
