@@ -168,6 +168,10 @@ h2{
 	display: flex;
 	justify-content: center;
 	padding: 5px;
+	@media (max-width: 500px){
+		flex-direction: column;
+		align-items: center;
+	}
 	.skills{
 		display: flex;
 		align-items: center;
@@ -178,7 +182,9 @@ h2{
 		.center();
 		@media(max-width: 500px){
 			width: 80%;
-			.paddingMarginProperties();
+			padding: 4%;
+			// .paddingMarginProperties();
+			}
 		}
 	}//.skills end
 	.workHistory{
@@ -190,22 +196,29 @@ h2{
 		.backgroundProperties();
 		.paddingMarginProperties();
 		.center();
+		li{
+			display: inline-block;
+		}
+		@media(max-width: 500px){
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+		}
 		.container{
 			display: flex;
 			justify-content: space-between;
-			width: 100%;
+			@media (max-width:500px){
+				justify-content: space-evenly;
+				padding: 4%;
+			}
 			.dates{
 				.paddingMarginProperties();
+			}//dates end
 			.establishment{
 				.paddingMarginProperties();
 				}//estab end
-			}//dates end
-		}//container end
-		@media(max-width: 500px){
-			width: 80%;
-			display: flex;
-		}//media query end
-	}//.workhistory end
+			}//container end
+		}//.workhistory end
 	.contact{
 		.boxWidth();
 		.backgroundProperties();
@@ -227,5 +240,3 @@ h2{
 			width: 80%;
 			}//media query end
 		}//.contact end
-	}//media query end
-}//boxes end

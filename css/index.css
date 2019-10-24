@@ -245,6 +245,12 @@ h2 {
   justify-content: center;
   padding: 5px;
 }
+@media (max-width: 500px) {
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .boxes .skills {
   display: flex;
   align-items: center;
@@ -260,11 +266,10 @@ h2 {
 @media (max-width: 500px) {
   .boxes .skills {
     width: 80%;
-    margin: 1%;
-    padding: 1%;
+    padding: 4%;
   }
 }
-.boxes .workHistory {
+.workHistory {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -277,26 +282,35 @@ h2 {
   padding: 1%;
   text-align: center;
 }
-.boxes .workHistory .container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.boxes .workHistory .container .dates {
-  margin: 1%;
-  padding: 1%;
-}
-.boxes .workHistory .container .dates .establishment {
-  margin: 1%;
-  padding: 1%;
+.workHistory li {
+  display: inline-block;
 }
 @media (max-width: 500px) {
-  .boxes .workHistory {
-    width: 80%;
+  .workHistory {
     display: flex;
+    flex-direction: column;
+    width: 80%;
   }
 }
-.boxes .contact {
+.workHistory .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .workHistory .container {
+    justify-content: space-evenly;
+    padding: 4%;
+  }
+}
+.workHistory .container .dates {
+  margin: 1%;
+  padding: 1%;
+}
+.workHistory .container .establishment {
+  margin: 1%;
+  padding: 1%;
+}
+.contact {
   width: 25%;
   background-image: url("../images/bkgd.jpg");
   background-position: center;
@@ -308,27 +322,16 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-.boxes .contact a {
+.contact a {
   width: 100%;
   text-decoration: none;
   color: #490c49;
 }
-.boxes .contact a :hover {
+.contact a :hover {
   opacity: 0.1;
 }
 @media (max-width: 500px) {
-  .boxes .contact {
+  .contact {
     width: 80%;
-  }
-}
-@media (max-width: 500px) {
-  .boxes {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
   }
 }
