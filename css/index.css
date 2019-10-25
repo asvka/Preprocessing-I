@@ -1,1 +1,337 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.backgroundProperties {
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.center {
+  text-align: center;
+}
+.paddingMarginProperties {
+  margin: 1%;
+  padding: 1%;
+}
+.boxWidth {
+  width: 25%;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 10px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  padding: 1%;
+  padding-right: 15%;
+  text-align: right;
+  opacity: 1;
+  transition: 0.1s;
+}
+nav a {
+  padding-left: 1%;
+  padding-right: 1%;
+  color: #490c49;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+nav a:hover {
+  opacity: 0.1;
+}
+@media (max-width: 500px) {
+  nav {
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1%;
+    padding: 1%;
+  }
+  nav a {
+    padding: 2%;
+    text-align: center;
+  }
+}
+.large-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.large-container .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 400px;
+  margin: 1%;
+  padding: 1%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.large-container .profile .profilePic {
+  padding: 3%;
+}
+.large-container .profile .intro {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  margin: 1%;
+  padding: 1%;
+}
+.large-container .profile .intro p {
+  color: #490c49;
+}
+@media (max-width: 500px) {
+  .large-container .profile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .large-container .profile .profilePic {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+h1 {
+  font-size: 4em;
+  color: #490c49;
+}
+h2 {
+  font-size: 2em;
+  color: #490c49;
+  margin: 1%;
+  padding: 1%;
+}
+.boxes {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+@media (max-width: 500px) {
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.boxes .skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  margin: 1%;
+  padding: 1%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .boxes .skills {
+    width: 80%;
+    padding: 4%;
+  }
+}
+.workHistory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 1%;
+  padding: 1%;
+  text-align: center;
+}
+.workHistory li {
+  display: inline-block;
+}
+@media (max-width: 500px) {
+  .workHistory {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+}
+.workHistory .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  .workHistory .container {
+    justify-content: space-evenly;
+    padding: 4%;
+  }
+}
+.workHistory .container .dates {
+  margin: 1%;
+  padding: 1%;
+}
+.workHistory .container .establishment {
+  margin: 1%;
+  padding: 1%;
+}
+.contact {
+  width: 25%;
+  background-image: url("../images/bkgd.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact a {
+  width: 100%;
+  text-decoration: none;
+  color: #490c49;
+}
+.contact a :hover {
+  opacity: 0.1;
+}
+@media (max-width: 500px) {
+  .contact {
+    width: 80%;
+  }
+}

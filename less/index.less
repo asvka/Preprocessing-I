@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -47,13 +47,196 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+//mixins
+.backgroundProperties{
+	background-image: url("../images/bkgd.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.center{
+	text-align: center;
+}
+.paddingMarginProperties{
+	margin: 1%;
+	padding: 1%;
+}
+.boxWidth{
+	width: 25%;
+}
+//variables
+@main-text-color: rgb(73, 12, 73);
 
-/* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-}
+	height: 100%;
+	font-size: 10px;
+}//html, body
+.header{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}//.header end
+nav {
+	padding: 1%;
+	padding-right: 15%;
+	text-align: right;
+	opacity: 1;
+	transition: 0.1s;
 
+	a {
+		padding-left: 1%;
+		padding-right: 1%;
+		color: @main-text-color;
+		text-decoration: none;
+		font-size: 1.4em;
+	}//nav a end
+	a:hover {
+		opacity: 0.1;
+	}//nav a:hover end
+
+	@media (max-width:500px){
+		font-size: 1.3em;
+		display: flex;
+		// flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		.paddingMarginProperties();
+		a{
+			padding: 2%;
+			text-align: center;
+		}
+	}
+}//nav end
+
+
+.large-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	.profile{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		height: 400px;
+		.paddingMarginProperties();
+		.backgroundProperties();
+		.profilePic{
+			padding: 3%;
+		}//profilePic end
+		.intro{
+				display: flex;
+				justify-content: space-evenly;
+				flex-direction: column;
+				width: 100%;
+				text-align: center;
+				align-items: center;
+				.paddingMarginProperties();
+			p{
+				color: @main-text-color;
+			}//p end
+		}//.intro end
+		@media (max-width: 500px){
+			.profilePic{
+				max-width: 200px;
+				max-height: 200px;
+			}
+			display: flex;
+			flex-direction: column-reverse;
+		}//media query end
+	}//.profile end
+}//.large-container end
+
+h1{
+	font-size: 4em;
+	color: @main-text-color;
+}//h1 end
+
+h2{
+	font-size: 2em;
+	color: @main-text-color;
+	.paddingMarginProperties();
+}//h2 end
+
+
+.boxes{
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	@media (max-width: 500px){
+		flex-direction: column;
+		align-items: center;
+	}
+	.skills{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		.boxWidth();
+		.paddingMarginProperties();
+		.backgroundProperties();
+		.center();
+		@media(max-width: 500px){
+			width: 80%;
+			padding: 4%;
+			// .paddingMarginProperties();
+			}
+		}
+	}//.skills end
+	.workHistory{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		.boxWidth();
+		.backgroundProperties();
+		.paddingMarginProperties();
+		.center();
+		li{
+			display: inline-block;
+		}
+		@media(max-width: 500px){
+			display: flex;
+			flex-direction: column;
+			width: 80%;
+		}
+		.container{
+			display: flex;
+			justify-content: space-between;
+			@media (max-width:500px){
+				justify-content: space-evenly;
+				padding: 4%;
+			}
+			.dates{
+				.paddingMarginProperties();
+			}//dates end
+			.establishment{
+				.paddingMarginProperties();
+				}//estab end
+			}//container end
+		}//.workhistory end
+	.contact{
+		.boxWidth();
+		.backgroundProperties();
+		.center();
+		.paddingMarginProperties();
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		 a {
+			width: 100%;
+			text-decoration: none;
+			color: @main-text-color;
+
+			:hover{
+				opacity: 0.1;
+			}//:hover end
+		}//a end
+		@media(max-width: 500px){
+			width: 80%;
+			}//media query end
+		}//.contact end
